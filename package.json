@@ -1,0 +1,53 @@
+{
+  "name": "@wblxr408/video-editing-studio",
+  "version": "1.0.2",
+  "type": "module",
+  "license": "Apache-2.0",
+  "exports": "./index.mjs",
+  "files": [
+    "index.mjs",
+    "client",
+    "third-party",
+    "LICENSE",
+    "README.md",
+    "agh.market.json"
+  ],
+  "agnes": {
+    "provides": [
+      "ui"
+    ],
+    "plugins": [
+      {
+        "id": "ext:wblxr408/video-editing-studio",
+        "export": "main",
+        "apiRange": "^5.0.0",
+        "runtime": "in-process",
+        "capabilities": {
+          "ui": true
+        },
+        "metadata": {
+          "displayName": "Video Editor",
+          "summary": "Storyboard, edit and export local video in AGH.",
+          "description": "Edit local footage with a storyboard, a timeline, and animated captions.",
+          "locales": {
+            "zh-CN": {
+              "displayName": "视频剪辑台",
+              "summary": "在 AGH 中进行本地分镜、剪辑与影片导出。",
+              "description": "使用分镜、时间轴和逐字字幕编辑本地素材。"
+            }
+          }
+        }
+      }
+    ],
+    "clientDescriptors": [
+      {
+        "rowId": "ext:wblxr408/video-editing-studio",
+        "path": "./client/agnes.client.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wblxr408/agh-video-editing-studio"
+  }
+}

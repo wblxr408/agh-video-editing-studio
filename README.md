@@ -1,7 +1,7 @@
 # AGH 视频剪辑台
 
 在 AGH 的「插件 → 添加插件」中选择本地安装包，安装后从默认 AGH 侧栏打开「视频剪辑台」。
-也可用 `agh plugins add git:https://github.com/wblxr408/agh-video-editing-studio#v1.0.2` 安装。该页面注册到 AGH
+也可用 `agh plugins add git:https://github.com/wblxr408/agh-video-editing-studio#runtime-v1.0.2` 安装。该页面注册到 AGH
 原生导航，可直接打开。若曾安装随岗位工作台提供的剪辑页面，可将该工作台升级到 1.4.1。
 
 1. 导入本地视频，或选择「试剪示例」。

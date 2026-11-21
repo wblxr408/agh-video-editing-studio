@@ -1,5 +1,5 @@
 {
-  "name": "@wblxr408/video-editing-studio",
+  "name": "@wblxr408/video-editing-studio-runtime",
   "version": "1.0.2",
   "type": "module",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
     ],
     "plugins": [
       {
-        "id": "ext:wblxr408/video-editing-studio",
+        "id": "ext:wblxr408/video-editing-studio-runtime",
         "export": "main",
         "apiRange": "^5.0.0",
         "runtime": "in-process",
@@ -41,7 +41,7 @@
     ],
     "clientDescriptors": [
       {
-        "rowId": "ext:wblxr408/video-editing-studio",
+        "rowId": "ext:wblxr408/video-editing-studio-runtime",
         "path": "./client/agnes.client.json"
       }
     ]

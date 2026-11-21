@@ -1,53 +1,65 @@
 {
   "name": "@wblxr408/video-editing-studio",
-  "version": "1.0.2",
-  "type": "module",
+  "version": "2.0.0",
   "license": "Apache-2.0",
-  "exports": "./index.mjs",
+  "description": "Configuration bundle. Install and authorize the separate runtime for Video Editing Studio.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wblxr408/agh-video-editing-studio"
+  },
   "files": [
-    "index.mjs",
-    "client",
-    "third-party",
     "LICENSE",
     "README.md",
     "agh.market.json"
   ],
   "agnes": {
     "provides": [
-      "ui"
+      "bundle"
     ],
-    "plugins": [
-      {
-        "id": "ext:wblxr408/video-editing-studio",
-        "export": "main",
-        "apiRange": "^5.0.0",
-        "runtime": "in-process",
-        "capabilities": {
-          "ui": true
+    "metadata": {
+      "displayName": "Video Editing Studio",
+      "summary": "Configuration bundle. Install and authorize the separate runtime for Video Editing Studio.",
+      "description": "Open Video Editor from the AGH sidebar to storyboard, edit and export local video.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "视频剪辑台",
+          "summary": "配置 Bundle。视频剪辑台功能由单独安装和授权的运行组件提供。",
+          "description": "从 AGH 侧栏打开视频剪辑台，使用分镜、时间轴和字幕编辑并导出本地视频。"
+        }
+      }
+    },
+    "bundles": {
+      "guide": {
+        "profile": {
+          "toolPolicy": {
+            "readOnly": true
+          }
         },
-        "metadata": {
-          "displayName": "Video Editor",
-          "summary": "Storyboard, edit and export local video in AGH.",
-          "description": "Edit local footage with a storyboard, a timeline, and animated captions.",
-          "locales": {
-            "zh-CN": {
-              "displayName": "视频剪辑台",
-              "summary": "在 AGH 中进行本地分镜、剪辑与影片导出。",
-              "description": "使用分镜、时间轴和逐字字幕编辑本地素材。"
+        "presets": {
+          "market-guide": {
+            "name": "market-guide",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "Video Editing Studio Setup",
+            "zh-CN": "视频剪辑台配置说明"
+          },
+          "description": {
+            "en": "Configuration bundle. Install and authorize the separate runtime for Video Editing Studio.",
+            "zh-CN": "配置 Bundle。视频剪辑台功能由单独安装和授权的运行组件提供。"
+          },
+          "preset": "market-guide",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "Explain how to set up Video Editing Studio in AGH. The owner installs and authorizes its separate runtime. Open Video Editor from the AGH sidebar to storyboard, edit and export local video.",
+              "zh-CN": "请说明如何在 AGH 中配置视频剪辑台。由所有者单独安装和授权运行组件。从 AGH 侧栏打开视频剪辑台，使用分镜、时间轴和字幕编辑并导出本地视频。"
             }
           }
         }
       }
-    ],
-    "clientDescriptors": [
-      {
-        "rowId": "ext:wblxr408/video-editing-studio",
-        "path": "./client/agnes.client.json"
-      }
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wblxr408/agh-video-editing-studio"
+    }
   }
 }

@@ -1,20 +1,19 @@
-# AGH 视频剪辑台
+# 视频剪辑台 · Video Editing Studio
 
-在 AGH 的「插件 → 添加插件」中选择本地安装包，安装后从默认 AGH 侧栏打开「视频剪辑台」。
-也可用 `agh plugins add git:https://github.com/wblxr408/agh-video-editing-studio#v1.0.2` 安装。该页面注册到 AGH
-原生导航，可直接打开。若曾安装随岗位工作台提供的剪辑页面，可将该工作台升级到 1.4.1。
+这个市场版本提供 AGH 配置 Bundle。视频剪辑台的实际运行功能由独立组件 `@wblxr408/video-editing-studio-runtime` 提供。
 
-1. 导入本地视频，或选择「试剪示例」。
-2. 点击分镜或拖动时间标尺定位，使用工具栏切分、重排和移除片段。
-3. 时间轴显示视频、原声和字幕。原声轨显示解码得到的波形，字幕轨显示包含逐字字幕的片段。
-4. 在检查器中输入逐字字幕，选择线性、缓入、缓出、缓入缓出或指数曲线。监看和导出使用同一曲线。
-5. 下载成片或剪辑表。打开过的素材和剪辑状态保留在当前页面内存中。
+## 安装
 
-处理在浏览器内完成。请使用支持 WebCodecs 的当前版桌面浏览器，单个源视频最大 500 MB。
-成片按可用编码器输出 MP4 或 WebM。依赖和逐字动效的出处见[第三方说明](third-party/NOTICE.md)。
+1. 安装经固定提交发布的运行组件。在 AGH 中审核其权限，再信任和启用。
 
-<a id="motion-samples"></a>
+   ```sh
+   agh plugins add git:https://github.com/wblxr408/agh-video-editing-studio#ee44c939f0630531cbd563bc1a8d0034a5760a9c
+   ```
 
-## 内置动效
+2. 在 AGH 市场安装并启用 `@wblxr408/video-editing-studio` 2.0.0。从 AGH 侧栏打开视频剪辑台，使用分镜、时间轴和字幕编辑并导出本地视频。
 
-10 个原创程序化动效随插件提供，采用 Apache-2.0 许可。每项均包含可下载的独立 JavaScript 模块和静态缩略图。选择试剪或将示例加入时间轴时，浏览器会用该模块现场生成一段四秒无声视频。也可以导入本地渲染结果。模块导出 `renderFrame(context, seconds)`，可在 Canvas 2D 中按时间绘制。
+市场包的智能体入口提供只读配置说明。实际界面由运行组件注册。
+
+如果已安装本仓库的旧版插件，请先用市场 Bundle 更新旧版，再安装新的运行组件，避免同一功能同时加载两个版本。
+
+[运行组件文档](https://github.com/wblxr408/agh-video-editing-studio/tree/runtime-v1.0.2) · [AGH 插件安装指南](https://github.com/AgnesAI-Labs/agnes-harness/blob/main/docs/guide/packages.zh-CN.md)

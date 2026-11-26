@@ -1,6 +1,6 @@
 {
   "name": "@wblxr408/video-editing-studio-runtime",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "license": "Apache-2.0",
   "exports": "./index.mjs",
@@ -44,7 +44,15 @@
         "rowId": "ext:wblxr408/video-editing-studio-runtime",
         "path": "./client/agnes.client.json"
       }
-    ]
+    ],
+    "application": {
+      "id": "video-editing-studio",
+      "presentation": {
+        "navigation": {
+          "entries": ["@wblxr408/video-editing-studio-runtime#video-editing-studio"]
+        }
+      }
+    }
   },
   "repository": {
     "type": "git",
